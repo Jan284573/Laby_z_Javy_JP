@@ -35,7 +35,6 @@ public class L1Z3_Map {
     }
 
 
-
     public static void doublePut(Map<String, String> map1, Map<String, String> map2, String key, String value){
         map1.put(key,value);
         map2.put(key,value);

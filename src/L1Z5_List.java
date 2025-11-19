@@ -29,7 +29,6 @@ public class L1Z5_List {
 
 }
 
-
 class Person{
     public String name;
     public int age;
