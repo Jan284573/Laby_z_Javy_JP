@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 public class L2Form {
     public JPanel GUI;
-    private JButton UserLoginSubmitButton;
+    private JButton MultiButton;
     private JTextArea outputTextArea;
     private JPasswordField passwordField1;
     private JButton moveLeftButton;
@@ -18,11 +18,11 @@ public class L2Form {
 
 
     public L2Form() {
-        UserLoginSubmitButton.addActionListener(new ActionListener() {
+        MultiButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String name = JOptionPane.showInputDialog(
-                        UserLoginSubmitButton,
+                        MultiButton,
                         "Podaj swoje imię: ",
                         "Okno dialogowe",
                         JOptionPane.QUESTION_MESSAGE
@@ -37,6 +37,7 @@ public class L2Form {
                 outputTextArea.append("\nWitaj");
                 outputTextArea.append("\nName: "+name);
                 outputTextArea.append("\nPassword: "+password);
+                outputTextArea.append("\nPassword Strengh: "+passwordStrengh(password));
 
                 passwordField1.setText("");
 
@@ -45,12 +46,12 @@ public class L2Form {
             }
         });
 
+        //Moveable Object Settings
         movePanel.setLayout(null);
         TestObject.setOpaque(true);
         if(TestObject.getWidth() ==0 || TestObject.getHeight() ==0){
             TestObject.setBounds(100,20,100,25);
         }
-
 
         scaleChangeButton.addActionListener(new ActionListener() {
             @Override
@@ -111,5 +112,23 @@ public class L2Form {
         });
     }
 
+    private static String passwordStrengh(String password){
+        int strengh=0;
+
+        if (!password.equals(password.toLowerCase())){
+            strengh++;
+        }
+
+        if (password.length()>=8){
+            strengh++;
+        }
+
+        return switch (strengh) {
+            case 0 -> "Weak";
+            case 1 -> "Medium";
+            case 2 -> "Strong";
+            default -> "";
+        };
+    }
 
 }
