@@ -7,7 +7,6 @@ import java.awt.event.ActionListener;
 public class L2Form {
     public JPanel GUI;
     private JButton UserLoginSubmitButton;
-    private JTextField UsernameTextField;
     private JTextArea outputTextArea;
     private JPasswordField passwordField1;
     private JButton moveLeftButton;
@@ -22,17 +21,23 @@ public class L2Form {
         UserLoginSubmitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String name = UsernameTextField.getText();
+                String name = JOptionPane.showInputDialog(
+                        UserLoginSubmitButton,
+                        "Podaj swoje imię: ",
+                        "Okno dialogowe",
+                        JOptionPane.QUESTION_MESSAGE
+                );
                 String password = new String(passwordField1.getPassword());
 
-                if(outputTextArea.getText().length()>300){
+                String text = outputTextArea.getText();
+                if (text.length()-text.replace("\n","").length() >= 21){
                     outputTextArea.setText("");
                 }
 
-                outputTextArea.append("\nName: "+name+"\n");
-                outputTextArea.append("Password: "+password);
+                outputTextArea.append("\nWitaj");
+                outputTextArea.append("\nName: "+name);
+                outputTextArea.append("\nPassword: "+password);
 
-                UsernameTextField.setText("Username");
                 passwordField1.setText("");
 
 
