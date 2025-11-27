@@ -1,3 +1,6 @@
+//SWING
+//Zadania: 1, 2, 3, 5
+
 
 import javax.swing.*;
 import java.awt.*;
