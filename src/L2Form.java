@@ -8,7 +8,7 @@ public class L2Form {
     public JPanel GUI;
     private JButton MultiButton;
     private JTextArea outputTextArea;
-    private JPasswordField passwordField1;
+    private JPasswordField passwordField;
     private JButton moveLeftButton;
     private JButton moveRightButton;
     private JButton scaleChangeButton;
@@ -27,7 +27,7 @@ public class L2Form {
                         "Okno dialogowe",
                         JOptionPane.QUESTION_MESSAGE
                 );
-                String password = new String(passwordField1.getPassword());
+
 
                 String text = outputTextArea.getText();
                 if (text.length()-text.replace("\n","").length() >= 21){
@@ -36,10 +36,9 @@ public class L2Form {
 
                 outputTextArea.append("\nWitaj");
                 outputTextArea.append("\nName: "+name);
-                outputTextArea.append("\nPassword: "+password);
-                outputTextArea.append("\nPassword Strengh: "+passwordStrengh(password));
+                outputTextArea.append("\nPassword Strengh: "+passwordStrengh(passwordField));
 
-                passwordField1.setText("");
+                passwordField.setText("");
 
 
 
@@ -112,14 +111,10 @@ public class L2Form {
         });
     }
 
-    private static String passwordStrengh(String password){
+    private static String passwordStrengh(JPasswordField password){
         int strengh=0;
 
-        if (!password.equals(password.toLowerCase())){
-            strengh++;
-        }
-
-        if (password.length()>=8){
+        if (password.getPassword().length >= 8){
             strengh++;
         }
 

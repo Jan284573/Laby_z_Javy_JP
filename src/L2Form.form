@@ -125,7 +125,7 @@
           <text value="Password"/>
         </properties>
       </component>
-      <component id="6bc7b" class="javax.swing.JPasswordField" binding="passwordField1" default-binding="true">
+      <component id="6bc7b" class="javax.swing.JPasswordField" binding="passwordField" default-binding="true">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="9" fill="1" indent="1" use-parent-layout="false">
             <preferred-size width="100" height="25"/>
