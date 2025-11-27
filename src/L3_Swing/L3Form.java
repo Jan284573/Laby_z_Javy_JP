@@ -1,3 +1,4 @@
+package L3_Swing;
 //SWING
 //Zadania: 1, 2, 3, 5
 
@@ -7,7 +8,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class L2Form {
+public class L3Form {
     public JPanel GUI;
     private JButton MultiButton;
     private JTextArea outputTextArea;
@@ -20,7 +21,7 @@ public class L2Form {
     private JButton colorButton;
 
 
-    public L2Form() {
+    public L3Form() {
         MultiButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

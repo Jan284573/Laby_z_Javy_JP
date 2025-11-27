@@ -1,3 +1,4 @@
+package L3_Swing;
 //SWING
 //Zadanie 4
 
@@ -6,7 +7,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class L2CalculatorGUI extends JFrame {
+public class L3CalculatorGUI extends JFrame {
 
     private JTextField display;
 
@@ -14,7 +15,7 @@ public class L2CalculatorGUI extends JFrame {
     private String currentOp = null;
     private boolean startNewNumber = true;
 
-    public L2CalculatorGUI() {
+    public L3CalculatorGUI() {
         setTitle("Kalkulator");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(300, 400);
@@ -119,7 +120,7 @@ public class L2CalculatorGUI extends JFrame {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            new L2CalculatorGUI().setVisible(true);
+            new L3CalculatorGUI().setVisible(true);
         });
     }
 }

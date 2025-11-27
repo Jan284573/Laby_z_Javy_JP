@@ -1,9 +1,11 @@
+package L2_Kolekcje;
+
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class L1Z1_Sets {
+public class L2Z1_Sets {
     public static void main(String[] args) {
         System.out.print("Podaj długość ciągu: ");
         var scanner= new Scanner(System.in);

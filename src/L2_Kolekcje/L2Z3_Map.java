@@ -1,8 +1,10 @@
+package L2_Kolekcje;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class L1Z3_Map {
+public class L2Z3_Map {
     public static void main(String[] args) {
 
         Map<String, String> PanStoMapHash = new HashMap<>();
