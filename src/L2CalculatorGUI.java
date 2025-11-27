@@ -1,5 +1,5 @@
 //SWING
-//ZAdanie 4
+//Zadanie 4
 
 import javax.swing.*;
 import java.awt.*;
