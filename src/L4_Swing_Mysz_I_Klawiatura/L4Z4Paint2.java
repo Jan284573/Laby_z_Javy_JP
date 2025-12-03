@@ -6,6 +6,9 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.geom.Ellipse2D;
 
+//Kiedy kliknie się w lewą strone figury, pojedzie na dół,
+// kiedy w prawą storne, pojedzie w prawo
+
 public class L4Z4Paint2 extends JFrame {
 
     public L4Z4Paint2(){
