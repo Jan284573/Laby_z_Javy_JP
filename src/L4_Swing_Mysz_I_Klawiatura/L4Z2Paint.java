@@ -27,8 +27,8 @@ public class L4Z2Paint extends JFrame {
 
 class PaintPanel extends JPanel {
 
-    private Rectangle kwadrat = new Rectangle(100,100,80,80);
-    private Ellipse2D.Double kolko = new Ellipse2D.Double(300,300,60,60);
+    private Rectangle kwadrat = new Rectangle(100,100,60,60);
+    private Ellipse2D.Double kolko = new Ellipse2D.Double(300,300,80,80);
 
     private Shape selectedShape = null;
     private int X,Y;
@@ -87,12 +87,11 @@ class PaintPanel extends JPanel {
 
         Graphics2D g2 = (Graphics2D) g;
 
-        g2.setColor(Color.red);
-        g2.fill(kwadrat);
-
         g2.setColor(Color.green);
         g2.fill(kolko);
 
-        repaint();
+        g2.setColor(Color.red);
+        g2.fill(kwadrat);
+
     }
 }
