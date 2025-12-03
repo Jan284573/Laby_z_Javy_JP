@@ -3,7 +3,7 @@ package L2_Kolekcje;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-public class L1Z5_List {
+public class L2Z5_List {
     public static void main(String[] args) {
         ArrayList<Person> personList = new ArrayList<>();
         personList.add(new Person("Ania", 20));
