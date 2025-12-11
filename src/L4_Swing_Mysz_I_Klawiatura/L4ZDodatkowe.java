@@ -65,7 +65,7 @@ class CanvaPanel extends JPanel {
 
         addMouseListener(new MouseAdapter() {
             @Override
-            public void mouseClicked(MouseEvent e) {
+            public void mousePressed(MouseEvent e) {
                 requestFocusInWindow();
                 if (actualShape != null) {
                     figureList.add(actualShape);
@@ -86,6 +86,8 @@ class CanvaPanel extends JPanel {
                 } else if (actualShape == kolko) {
                     kolko.x = x;
                     kolko.y = y;
+                }else{
+                    return;
                 }
                 repaint();
             }
