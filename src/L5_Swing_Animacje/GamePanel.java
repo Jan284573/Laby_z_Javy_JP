@@ -36,7 +36,7 @@ public class GamePanel extends JPanel implements ActionListener {
         timer = new Timer(delay, this);
 
 
-        stoneList.add(new Stone(100,520,100,30));
+        stoneList.add(new Stone(100,550,100,20));
         stoneList.add(new Stone(100,30,120,35));
         stoneList.add(new Stone(400,230,40,30));
 
@@ -115,7 +115,7 @@ public class GamePanel extends JPanel implements ActionListener {
         player.vy += GRAVITY;
         player.y += player.vy;
 
-        int groundY = getHeight() - player.height - 10 - Stone.stoneHeight;
+        int groundY = getHeight() - player.height - 10 - player.bonusHeight;
         if (player.y >= groundY) {
             player.y = groundY;
             player.vy = 0;

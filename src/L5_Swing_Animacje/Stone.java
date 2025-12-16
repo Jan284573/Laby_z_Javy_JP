@@ -4,7 +4,6 @@ import java.awt.*;
 
 public class Stone extends Rectangle {
     public static Color kolor = Color.gray;
-    public static int stoneHeight = 0;
 
     public Stone(int x, int y, int width, int height){
         super(x,y,width,height);
