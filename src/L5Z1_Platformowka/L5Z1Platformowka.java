@@ -1,4 +1,4 @@
-package L5_Swing_Animacje;
+package L5Z1_Platformowka;
 
 import javax.swing.*;
 import java.awt.*;
